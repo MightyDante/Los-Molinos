@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundGravity="center"
+    app:layout_anchorGravity="center"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintWidth_max="@dimen/activity_horizontal_margin"
+    app:layout_gravity="center">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ScrollViewCount">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TableRow
+                android:id="@+id/lop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="4dp">
+
+                <ImageButton
+                    android:id="@+id/mapa"
+                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_weight="1"
+                    android:background="#00325B"
+                    android:elevation="0dp"
+                    app:srcCompat="@mipmap/icomapafinal" />
+
+                <ImageButton
+                    android:id="@+id/predicacion"
+                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_weight="1"
+                    android:background="#cb6232"
+                    android:elevation="0dp"
+                    app:srcCompat="@mipmap/predi" />
+
+                <ImageButton
+                    android:id="@+id/carrito"
+                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_weight="1"
+                    android:background="#333333"
+                    android:elevation="0dp"
+                    app:srcCompat="@mipmap/iconcarrito" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:padding="20dp"
+                    android:text="Territorios"
+                    android:textAlignment="center"
+                    android:textColor="#848484"
+                    android:textSize="22sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageButton
+                    android:id="@+id/terr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri1" />
+
+                <ImageButton
+                    android:id="@+id/terr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri2" />
+
+                <ImageButton
+                    android:id="@+id/terr3"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr4"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri4" />
+
+                <ImageButton
+                    android:id="@+id/terr5"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri5" />
+
+                <ImageButton
+                    android:id="@+id/terr6"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri6" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr7"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri7" />
+
+                <ImageButton
+                    android:id="@+id/terr8"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri8" />
+
+                <ImageButton
+                    android:id="@+id/terr9"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri9" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr10"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri10" />
+
+                <ImageButton
+                    android:id="@+id/terr11"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri11" />
+
+                <ImageButton
+                    android:id="@+id/terr12"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri12" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr13"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri13" />
+
+                <ImageButton
+                    android:id="@+id/terr14"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri14" />
+
+                <ImageButton
+                    android:id="@+id/terr15"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri15" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr16"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri16" />
+
+                <ImageButton
+                    android:id="@+id/terr17"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri17"
+                    tools:layout_editor_absoluteX="300dp"
+                    tools:layout_editor_absoluteY="876dp" />
+
+                <ImageButton
+                    android:id="@+id/terr18"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri18" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr19"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri19" />
+
+                <ImageButton
+                    android:id="@+id/terr20"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri20" />
+
+                <ImageButton
+                    android:id="@+id/terr21"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri21" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr22"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri22" />
+
+                <ImageButton
+                    android:id="@+id/terr23"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri23" />
+
+                <ImageButton
+                    android:id="@+id/terr24"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri24" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr25"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri25" />
+
+                <ImageButton
+                    android:id="@+id/terr26"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri26" />
+
+                <ImageButton
+                    android:id="@+id/terr27"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri27" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr28"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri28" />
+
+                <ImageButton
+                    android:id="@+id/terr29"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri29" />
+
+                <ImageButton
+                    android:id="@+id/terr30"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri30" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr31"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri31" />
+
+                <ImageButton
+                    android:id="@+id/terr32"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri32" />
+
+                <ImageButton
+                    android:id="@+id/terr33"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri33" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr34"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri34" />
+
+                <ImageButton
+                    android:id="@+id/terr35"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri35" />
+
+                <ImageButton
+                    android:id="@+id/terr36"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri36" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr37"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri37" />
+
+                <ImageButton
+                    android:id="@+id/terr38"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri38" />
+
+                <ImageButton
+                    android:id="@+id/terr39"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@mipmap/terri39" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/terr40"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri40" />
+
+                <ImageButton
+                    android:id="@+id/terr41"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#9B401C"
+                    app:srcCompat="@mipmap/terri41" />
+
+                <ImageButton
+                    android:id="@+id/nada"
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#00000000" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/jol"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#00325B"
+        android:elevation="10dp"
+        android:visibility="visible"
+        app:fab_title="informe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        app:srcCompat="@mipmap/infprme" />
+
+
+</android.support.constraint.ConstraintLayout>
+
