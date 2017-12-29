@@ -32,9 +32,9 @@ public class Carritohoradatos extends AppCompatActivity {
             public void onClick(View view) {
 
                 NotificationCompat.Builder mBuilder;
-                NotificationManager mNotifyMgr =(NotificationManager) getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
+                NotificationManager mNotifyMgr = (NotificationManager) getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
 
-                Intent i=new Intent(Carritohoradatos.this, Main2Activity.class);
+                Intent i = new Intent(Carritohoradatos.this, Main2Activity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(Carritohoradatos.this, 0, i, 0);
 
                 mBuilder = new NotificationCompat.Builder(getApplicationContext())
@@ -42,9 +42,8 @@ public class Carritohoradatos extends AppCompatActivity {
                         .setSmallIcon(R.mipmap.logo)
                         .setContentTitle("Titulo")
                         .setContentText("Hola que tal?")
-                        .setVibrate(new long[] {100, 200, 200, 200})
+                        .setVibrate(new long[]{100, 200, 200, 200})
                         .setAutoCancel(true);
-
 
 
                 mNotifyMgr.notify(1, mBuilder.build());
@@ -53,10 +52,8 @@ public class Carritohoradatos extends AppCompatActivity {
         });
 
 
-
-
         dia.setText(Fecha);
-        hora.setText(Desde+" - "+Hasta);
+        hora.setText(Desde + " - " + Hasta);
 
     }
 }

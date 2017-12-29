@@ -46,10 +46,6 @@
             android:label="Territorio 4A"
             android:parentActivityName=".Main2Activity" />
         <activity
-            android:name=".Terr4b"
-            android:label="Territorio 4B"
-            android:parentActivityName=".Main2Activity" />
-        <activity
             android:name=".Terr5"
             android:label="Territorio 5"
             android:parentActivityName=".Main2Activity" />
@@ -184,18 +180,6 @@
         <activity
             android:name=".Terr38"
             android:label="Territorio 38"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr39"
-            android:label="Territorio 39"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr40"
-            android:label="Territorio 40"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr41"
-            android:label="Territorio 41"
             android:parentActivityName=".Main2Activity" />
         <activity
             android:name=".Mapa"
@@ -407,7 +391,6 @@
         <activity
             android:name=".Configuracion"
             android:parentActivityName=".Main2Activity" />
-        <activity android:name=".thisand4" />
         <activity
             android:name=".Informe"
             android:label="Informe de Servicio" />

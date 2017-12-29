@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -17,10 +16,10 @@ import android.widget.TextView;
 import java.util.Objects;
 
 
-public class Configuracion extends AppCompatActivity  {
+public class Configuracion extends AppCompatActivity {
 
     Switch ACT;
-    TextView Nombre, test;
+    TextView test;
 
     private String PREFS_KEY = "mispreferencias";
 
@@ -29,7 +28,7 @@ public class Configuracion extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
-        ACT =  findViewById(R.id.act);
+        ACT = findViewById(R.id.act);
         test = findViewById(R.id.test);
 
         SharedPreferences preferencias = getSharedPreferences("HOLAA", Context.MODE_PRIVATE);
@@ -37,18 +36,39 @@ public class Configuracion extends AppCompatActivity  {
         boolean estado_switch = getValuePreference(getApplicationContext());
         ACT.setChecked(estado_switch);
 
-        ACT.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+        String g = test.getHint().toString();
+        if(Objects.equals(g, "Aqui estará tu Nombre")){
+
+            test.setBackgroundColor(Color.parseColor("#FFF1986F"));
+
+        }
+
+
+
+        String h = test.getText().toString();
+        if (Objects.equals(h, "")) {
+            test.setBackgroundColor(Color.parseColor("#FFF1986F"));
+
+
+        }
+        else {
+
+            test.setBackgroundColor(Color.parseColor("#cb6232"));
+
+        }
+
+
+
+        ACT.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 saveValuePreference(getApplicationContext(), isChecked);
 
 
+                if (isChecked) {
 
-
-                if(isChecked){
-
-                    AlertDialog.Builder builder=new AlertDialog.Builder(Configuracion.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Configuracion.this);
                     builder.setCancelable(true);
                     builder.setIcon(R.mipmap.icon);
                     builder.setTitle("Ingresa un Nombre");
@@ -56,7 +76,7 @@ public class Configuracion extends AppCompatActivity  {
                     builder.setView(input);
 
 
-                    builder.setPositiveButton("Listo",new DialogInterface.OnClickListener() {
+                    builder.setPositiveButton("Listo", new DialogInterface.OnClickListener() {
 
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -140,47 +160,48 @@ public class Configuracion extends AppCompatActivity  {
                             Intent avvvv = new Intent(Configuracion.this, Terr34.class);
                             avvvv.putExtra("TCUATRO", nombre);
                             Intent av = new Intent(Configuracion.this, Terr35.class);
-                            av.putExtra("TCINCO", nombre);
+                            av.putExtra("TCINCO" +
+                                    "", nombre);
                             Intent aq = new Intent(Configuracion.this, Terr36.class);
                             aq.putExtra("TSEIS", nombre);
                             Intent accc = new Intent(Configuracion.this, Terr37.class);
                             accc.putExtra("TSIETE", nombre);
                             Intent gg = new Intent(Configuracion.this, Terr38.class);
                             gg.putExtra("TOCHO", nombre);
-                            Intent gd = new Intent(Configuracion.this, Terr39.class);
-                            gd.putExtra("TNUEVE", nombre);
-                            Intent ggg = new Intent(Configuracion.this, Terr40.class);
-                            ggg.putExtra("C", nombre);
-                            Intent mmm = new Intent(Configuracion.this, Terr41.class);
-                            mmm.putExtra("CUNO", nombre);
+
                             test.setBackgroundColor(Color.parseColor("#cb6232"));
+                            String moa = test.getHint().toString();
+                            if(Objects.equals(moa, "Aqui estará tu Nombre")){
+
+                                test.setBackgroundColor(Color.parseColor("#FFF1986F"));
+
+                            }
 
                         }
 
 
                     });
 
-                    builder.setNegativeButton("Cancelar",new DialogInterface.OnClickListener()
-                    {
+                    builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
 
                         @Override
-                        public void onClick(DialogInterface dialog, int which)
-                        {
-
+                        public void onClick(DialogInterface dialog, int which) {
+                            test.setBackgroundColor(Color.parseColor("#FFF1986F"));
                             dialog.dismiss();
                             ACT.setChecked(false);
 
                         }
                     });
-                    AlertDialog alert=builder.create();
+                    AlertDialog alert = builder.create();
 
                     alert.show();
 
 
-                }
-                else{
-                    getSharedPreferences("HOLAA",MODE_PRIVATE).edit().clear().apply();
+                } else {
+                    getSharedPreferences("HOLAA", MODE_PRIVATE).edit().clear().apply();
                     test.setText("Ingresa un Nombre");
+                    test.setBackgroundColor(Color.parseColor("#FFF1986F"));
+
 
 
                 }
@@ -188,11 +209,8 @@ public class Configuracion extends AppCompatActivity  {
         });
 
 
-
-
-
-
     }
+
     public void saveValuePreference(Context context, boolean valor) {
         SharedPreferences settings = context.getSharedPreferences(PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor;
@@ -202,14 +220,13 @@ public class Configuracion extends AppCompatActivity  {
 
 
     }
+
     public boolean getValuePreference(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, MODE_PRIVATE);
-        return  preferences.getBoolean("estado_switch", false);
+        return preferences.getBoolean("estado_switch", false);
 
 
     }
-
-
 
 
 }

@@ -47,15 +47,15 @@ public class Terr8 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terr8);
-        TableRow = (ImageView) findViewById(R.id.img);
-        Nombre = (EditText) findViewById(R.id.Nombre);
+        TableRow = findViewById(R.id.img);
+        Nombre = findViewById(R.id.Nombre);
 
         String Hasta = getIntent().getStringExtra("OCHO");
         Nombre.setText(Hasta + "");
         SharedPreferences preferencias = getSharedPreferences("HOLAA", Context.MODE_PRIVATE);
         Nombre.setText(preferencias.getString("lol", ""));
-        horario = (Switch) findViewById(R.id.cambio);
-        Hola = (android.widget.TableRow) findViewById(R.id.cambiocolor);
+        horario = findViewById(R.id.cambio);
+        Hola = findViewById(R.id.cambiocolor);
         horario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +69,7 @@ public class Terr8 extends AppCompatActivity implements View.OnClickListener {
         });
         photoViewAttacher = new PhotoViewAttacher(TableRow);
 
-        Fecha = (TextView) findViewById(R.id.fecha);
+        Fecha = findViewById(R.id.fecha);
         Fecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,18 +102,18 @@ public class Terr8 extends AppCompatActivity implements View.OnClickListener {
 
     public void onToogle(View view) {
 
-        ToggleButton toogle = (ToggleButton)findViewById(R.id.toggleButton);
+        ToggleButton toogle = findViewById(R.id.toggleButton);
         Boolean estado = toogle.isChecked();
 
-        CheckBox chk1 = (CheckBox)findViewById(R.id.manzana1);
+        CheckBox chk1 = findViewById(R.id.manzana1);
         chk1.setChecked(estado);
-        CheckBox chk2 = (CheckBox)findViewById(R.id.manzana2);
+        CheckBox chk2 = findViewById(R.id.manzana2);
         chk2.setChecked(estado);
-        CheckBox chk3 = (CheckBox)findViewById(R.id.manzana3);
+        CheckBox chk3 = findViewById(R.id.manzana3);
         chk3.setChecked(estado);
-        CheckBox chk4 = (CheckBox)findViewById(R.id.manzana4);
+        CheckBox chk4 = findViewById(R.id.manzana4);
         chk4.setChecked(estado);
-        CheckBox chk5 = (CheckBox)findViewById(R.id.manzana5);
+        CheckBox chk5 = findViewById(R.id.manzana5);
         chk5.setChecked(estado);
 
     }
@@ -123,47 +123,47 @@ public class Terr8 extends AppCompatActivity implements View.OnClickListener {
         String horario = "";
         String manzanas = "";
 
-        Switch horarios = (Switch) findViewById(R.id.cambio);
+        Switch horarios = findViewById(R.id.cambio);
         Boolean hr = horarios.isChecked();
         if(hr == true)
             horario = horario+"Tarde";
         else{
             horario = horario+"Mañana";
         }
-        CheckBox chk = (CheckBox)findViewById(R.id.manzana1);
+        CheckBox chk = findViewById(R.id.manzana1);
         Boolean estado = chk.isChecked();
         Log.d("Estado",estado.toString());
         if(estado == true)
             manzanas = manzanas+"1,";
-        chk = (CheckBox)findViewById(R.id.manzana2);
+        chk = findViewById(R.id.manzana2);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"2,";
-        chk = (CheckBox)findViewById(R.id.manzana3);
+        chk = findViewById(R.id.manzana3);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"3,";
-        chk = (CheckBox)findViewById(R.id.manzana4);
+        chk = findViewById(R.id.manzana4);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"4,";
-        chk = (CheckBox)findViewById(R.id.manzana5);
+        chk = findViewById(R.id.manzana5);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"5,";
 
-        CheckBox chk2 = (CheckBox)findViewById(R.id.manzana1);
+        CheckBox chk2 = findViewById(R.id.manzana1);
         Boolean estado2 = chk.isChecked();
         if(estado2 == true)
-            chk2 = (CheckBox)findViewById(R.id.manzana2);
+            chk2 = findViewById(R.id.manzana2);
         estado2 = chk2.isChecked();
-        if(estado2 == true) chk2 = (CheckBox)findViewById(R.id.manzana3);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = (CheckBox)findViewById(R.id.manzana4);
+        if(estado2 == true) chk2 = findViewById(R.id.manzana3);
         estado2 = chk2.isChecked();
         if(estado2 == true)
-            chk2 = (CheckBox)findViewById(R.id.manzana5);
+            chk2 = findViewById(R.id.manzana4);
+        estado2 = chk2.isChecked();
+        if(estado2 == true)
+            chk2 = findViewById(R.id.manzana5);
         estado2 = chk2.isChecked();
         if(estado2 == true)
             if(estado2 == true)

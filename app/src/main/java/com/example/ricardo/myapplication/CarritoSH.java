@@ -47,12 +47,12 @@ public class CarritoSH extends AppCompatActivity {
                                         savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carritohora);
-        hrs = (TextView) findViewById(R.id.hora);
-        hrs2 = (TextView) findViewById(hora2);
-        sig = (Button) findViewById(R.id.bsiguiente);
+        hrs = findViewById(R.id.hora);
+        hrs2 = findViewById(hora2);
+        sig = findViewById(R.id.bsiguiente);
 
 
-        Fecha = (TextView) findViewById(R.id.fecha);
+        Fecha = findViewById(R.id.fecha);
         Fecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

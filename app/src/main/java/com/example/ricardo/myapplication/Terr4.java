@@ -6,20 +6,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Handler;
-import android.support.design.widget.TabLayout;
-import android.support.v7.app.AppCompatActivity;
-
-import java.util.Calendar;
-import java.util.Objects;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -29,19 +20,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.util.Calendar;
+import java.util.Objects;
+
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 import static android.os.Build.ID;
-import static android.util.Log.d;
-import static com.example.ricardo.myapplication.R.id.Nombre2;
-import static com.example.ricardo.myapplication.R.id.amanzana1;
-import static com.example.ricardo.myapplication.R.id.amanzana2;
-import static com.example.ricardo.myapplication.R.id.bmanzana1;
-import static com.example.ricardo.myapplication.R.id.bmanzana2;
-import static com.example.ricardo.myapplication.R.id.bmanzana3;
-import static com.example.ricardo.myapplication.R.id.bmanzana4;
-import static com.example.ricardo.myapplication.R.id.fecha;
-import static com.example.ricardo.myapplication.R.id.fecha2;
+
 
 public class Terr4 extends AppCompatActivity implements View.OnClickListener{
 
@@ -67,17 +52,17 @@ public class Terr4 extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.at);
-        TableRow = (ImageView) findViewById(R.id.img);
-        Nombre = (EditText) findViewById(R.id.Nombre);
+        setContentView(R.layout.activity_terr4);
+        TableRow = findViewById(R.id.img);
+        Nombre = findViewById(R.id.Nombre);
         photoViewAttacher = new PhotoViewAttacher(TableRow);
         String Hasta = getIntent().getStringExtra("CUATRO");
         Nombre.setText(Hasta + "");
         SharedPreferences preferencias = getSharedPreferences("HOLAA", Context.MODE_PRIVATE);
         Nombre.setText(preferencias.getString("lol", ""));
 
-        horario = (Switch) findViewById(R.id.cambio);
-        Hola = (android.widget.TableRow) findViewById(R.id.cambiocolor);
+        horario = findViewById(R.id.cambio);
+        Hola = findViewById(R.id.cambiocolor);
         horario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +74,7 @@ public class Terr4 extends AppCompatActivity implements View.OnClickListener{
                     Hola.setBackgroundColor(Color.parseColor("#FF03A29D"));}
             }
         });
-        Fecha = (TextView) findViewById(R.id.fecha);
+        Fecha = findViewById(R.id.fecha);
         Fecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,13 +112,13 @@ public class Terr4 extends AppCompatActivity implements View.OnClickListener{
 
 
 
-    public void onToogle(View view) {
+    public void onToogle4(View view) {
 
-        ToggleButton toogle2 = (ToggleButton)findViewById(R.id.toggleButton);
+        ToggleButton toogle2 = findViewById(R.id.toggleButton);
         Boolean estado2 = toogle2.isChecked();
-        CheckBox chk1 = (CheckBox)findViewById(R.id.amanzana1);
+        CheckBox chk1 = findViewById(R.id.manzana1);
         chk1.setChecked(estado2);
-        CheckBox chk2 = (CheckBox)findViewById(R.id.amanzana2);
+        CheckBox chk2 = findViewById(R.id.manzana2);
         chk2.setChecked(estado2);
 
     }
@@ -147,7 +132,7 @@ public class Terr4 extends AppCompatActivity implements View.OnClickListener{
         String manzanas2 = "";
         String horario = "";
 
-        Switch horarios = (Switch) findViewById(R.id.cambio);
+        Switch horarios = findViewById(R.id.cambio);
         Boolean hr = horarios.isChecked();
         if(hr == true)
             horario = horario+"Tarde";
@@ -155,25 +140,25 @@ public class Terr4 extends AppCompatActivity implements View.OnClickListener{
             horario = horario+"Mañana";
         }
 
-        CheckBox chk = (CheckBox)findViewById(R.id.amanzana1);
+        CheckBox chk = findViewById(R.id.manzana1);
         Boolean estado = chk.isChecked();
 
         Log.d("Estado",estado.toString());
         if(estado == true)
             manzanas2 = manzanas2+"1,";
-        chk = (CheckBox)findViewById(R.id.amanzana2);
+        chk = findViewById(R.id.manzana2);
         estado = chk.isChecked();
         if(estado == true)
             manzanas2 = manzanas2+"2,";
 
-        CheckBox chk2 = (CheckBox)findViewById(R.id.amanzana1);
-        CheckBox chk3 = (CheckBox)findViewById(R.id.amanzana2);
+        CheckBox chk2 = findViewById(R.id.manzana1);
+        CheckBox chk3 = findViewById(R.id.manzana2);
 
         Boolean estado3 = chk2.isChecked();
         Boolean estado2 = chk3.isChecked();
         if(estado3 == true)
 
-        estado2 = chk3.isChecked();
+            estado2 = chk3.isChecked();
         if(estado2 == true)
             if(estado3 && estado2 == true)
                 manzanas2 = "Completo ";

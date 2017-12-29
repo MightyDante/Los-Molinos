@@ -80,35 +80,35 @@ public class Direcciones extends AppCompatActivity {
         setContentView(R.layout.activity_direcciones);
 
 
-        arancibia =(Button)findViewById(R.id.arancibia);
-        becerra =(Button)findViewById(R.id.becerra);
-        camus =(Button)findViewById(R.id.camus);
-        castro =(Button)findViewById(R.id.castro);
-        acosta =(Button)findViewById(R.id.acosta);
-        gajardo =(Button)findViewById(R.id.gajardo);
-        garces =(Button)findViewById(R.id.garces);
-        guajardo =(Button)findViewById(R.id.guajardo);
-        hernandez =(Button)findViewById(R.id.hernandez);
-        llanquin =(Button)findViewById(R.id.llanquin);
-        lorca =(Button)findViewById(R.id.lorca);
-        medina =(Button)findViewById(R.id.medina);
-        meza =(Button)findViewById(R.id.meza);
-        mino =(Button)findViewById(R.id.mino);
-        morgado =(Button)findViewById(R.id.morgado);
-        olivares =(Button)findViewById(R.id.olivares);
-        ortiz =(Button)findViewById(R.id.ortiz);
-        perez =(Button)findViewById(R.id.perez);
-        rodriguez =(Button)findViewById(R.id.rodriguez);
-        rojas =(Button)findViewById(R.id.rojas);
-        saavedra =(Button)findViewById(R.id.saavedra);
-        saez =(Button)findViewById(R.id.saez);
-        sandoval =(Button)findViewById(R.id.sandoval);
-        sanchesl =(Button)findViewById(R.id.sanchesl);
-        sanchesp =(Button)findViewById(R.id.sanchesp);
-        sanmartin =(Button)findViewById(R.id.sanmartin);
-        soto =(Button)findViewById(R.id.soto);
-        suazo =(Button)findViewById(R.id.suazo);
-        zavala =(Button)findViewById(R.id.zavala);
+        arancibia = findViewById(R.id.arancibia);
+        becerra = findViewById(R.id.becerra);
+        camus = findViewById(R.id.camus);
+        castro = findViewById(R.id.castro);
+        acosta = findViewById(R.id.acosta);
+        gajardo = findViewById(R.id.gajardo);
+        garces = findViewById(R.id.garces);
+        guajardo = findViewById(R.id.guajardo);
+        hernandez = findViewById(R.id.hernandez);
+        llanquin = findViewById(R.id.llanquin);
+        lorca = findViewById(R.id.lorca);
+        medina = findViewById(R.id.medina);
+        meza = findViewById(R.id.meza);
+        mino = findViewById(R.id.mino);
+        morgado = findViewById(R.id.morgado);
+        olivares = findViewById(R.id.olivares);
+        ortiz = findViewById(R.id.ortiz);
+        perez = findViewById(R.id.perez);
+        rodriguez = findViewById(R.id.rodriguez);
+        rojas = findViewById(R.id.rojas);
+        saavedra = findViewById(R.id.saavedra);
+        saez = findViewById(R.id.saez);
+        sandoval = findViewById(R.id.sandoval);
+        sanchesl = findViewById(R.id.sanchesl);
+        sanchesp = findViewById(R.id.sanchesp);
+        sanmartin = findViewById(R.id.sanmartin);
+        soto = findViewById(R.id.soto);
+        suazo = findViewById(R.id.suazo);
+        zavala = findViewById(R.id.zavala);
 
 
         arancibia.setOnClickListener(new View.OnClickListener() {

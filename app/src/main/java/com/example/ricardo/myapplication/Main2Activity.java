@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-public class Main2Activity extends AppCompatActivity  {
+public class Main2Activity extends AppCompatActivity {
     private static final int INTERVALO = 2000; //2 segundos para salir
     private long tiempoPrimerClick;
     private static final int I_ACCESS_FINE_LOCATION = 0;
@@ -68,17 +68,15 @@ public class Main2Activity extends AppCompatActivity  {
     ImageButton territorio36;
     ImageButton territorio37;
     ImageButton territorio38;
-    ImageButton territorio39;
-    ImageButton territorio40;
-    ImageButton territorio41;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-                Boolean isFirstRun =
+        Boolean isFirstRun =
                 getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getBoolean("isFirstRun", true);
+                        .getBoolean("isFirstRun", true);
 
 
         if (isFirstRun) {
@@ -87,7 +85,7 @@ public class Main2Activity extends AppCompatActivity  {
 
         }
 
-        getSharedPreferences("PREFERENCE",MODE_PRIVATE).edit()
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                 .putBoolean("isFirstRun", false).commit();
 
 // Here, thisActivity is the current activity
@@ -186,10 +184,8 @@ public class Main2Activity extends AppCompatActivity  {
         territorio36 = findViewById(R.id.terr36);
         territorio37 = findViewById(R.id.terr37);
         territorio38 = findViewById(R.id.terr38);
-        territorio39 = findViewById(R.id.terr39);
-        territorio40 = findViewById(R.id.terr40);
-        territorio41 = findViewById(R.id.terr41);
-        fab =  findViewById(R.id.jol);
+
+        fab = findViewById(R.id.jol);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -197,7 +193,7 @@ public class Main2Activity extends AppCompatActivity  {
                 Vibrator vibrator = (Vibrator)
                         getSystemService(Context.VIBRATOR_SERVICE);
                 if (view == fab) vibrator.vibrate(1);
-                Intent dire = new Intent(Main2Activity.this, Informe.class );
+                Intent dire = new Intent(Main2Activity.this, Informe.class);
                 startActivity(dire);
 
 
@@ -207,38 +203,38 @@ public class Main2Activity extends AppCompatActivity  {
 
         carrito.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                       @Override
+                                       public void onClick(View v) {
 
-                                               Intent carrito = new Intent(Main2Activity.this, Carritoi.class );
-                                               startActivity(carrito);
-                                           }
+                                           Intent carrito = new Intent(Main2Activity.this, Carritoi.class);
+                                           startActivity(carrito);
                                        }
+                                   }
 
         );
 
         territorio1.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
+                                           @Override
+                                           public void onClick(View v) {
 
-                Intent territorio1 = new Intent(Main2Activity.this, Terr1.class );
-                startActivity(territorio1);
-            }
-                                                   }
+                                               Intent territorio1 = new Intent(Main2Activity.this, Terr1.class);
+                                               startActivity(territorio1);
+                                           }
+                                       }
 
         );
 
 
         territorio2.setOnClickListener(new View.OnClickListener() {
 
-                    @Override
-                    public void onClick(View v) {
+                                           @Override
+                                           public void onClick(View v) {
 
-                        Intent territorio2 = new Intent(Main2Activity.this, Terr2.class );
-                        startActivity(territorio2);
-                    }
-                }
+                                               Intent territorio2 = new Intent(Main2Activity.this, Terr2.class);
+                                               startActivity(territorio2);
+                                           }
+                                       }
         );
 
 
@@ -247,7 +243,7 @@ public class Main2Activity extends AppCompatActivity  {
                                            @Override
                                            public void onClick(View v) {
 
-                                               Intent territorio3 = new Intent(Main2Activity.this, terr3.class );
+                                               Intent territorio3 = new Intent(Main2Activity.this, terr3.class);
                                                startActivity(territorio3);
                                            }
                                        }
@@ -258,11 +254,8 @@ public class Main2Activity extends AppCompatActivity  {
 
                                            @Override
                                            public void onClick(View v) {
-                                               AlertDialog.Builder builder=new AlertDialog.Builder(Main2Activity.this);
-                                               builder.setCancelable(true);
-                                               builder.setView(R.layout.cuatroaob);
-                                               AlertDialog alert=builder.create();
-                                               alert.show();
+                                               Intent territorio4 = new Intent(Main2Activity.this, Terr4.class);
+                                               startActivity(territorio4);
 
 
                                            }
@@ -274,7 +267,7 @@ public class Main2Activity extends AppCompatActivity  {
                                            @Override
                                            public void onClick(View v) {
 
-                                               Intent territorio5 = new Intent(Main2Activity.this, Terr5.class );
+                                               Intent territorio5 = new Intent(Main2Activity.this, Terr5.class);
                                                startActivity(territorio5);
                                            }
                                        }
@@ -286,7 +279,7 @@ public class Main2Activity extends AppCompatActivity  {
                                            @Override
                                            public void onClick(View v) {
 
-                                               Intent territorio6 = new Intent(Main2Activity.this, Terr6.class );
+                                               Intent territorio6 = new Intent(Main2Activity.this, Terr6.class);
                                                startActivity(territorio6);
                                            }
                                        }
@@ -297,7 +290,7 @@ public class Main2Activity extends AppCompatActivity  {
                                            @Override
                                            public void onClick(View v) {
 
-                                               Intent territorio7 = new Intent(Main2Activity.this, Terr7.class );
+                                               Intent territorio7 = new Intent(Main2Activity.this, Terr7.class);
                                                startActivity(territorio7);
                                            }
                                        }
@@ -309,7 +302,7 @@ public class Main2Activity extends AppCompatActivity  {
                                            @Override
                                            public void onClick(View v) {
 
-                                               Intent territorio8 = new Intent(Main2Activity.this, Terr8.class );
+                                               Intent territorio8 = new Intent(Main2Activity.this, Terr8.class);
                                                startActivity(territorio8);
                                            }
                                        }
@@ -321,7 +314,7 @@ public class Main2Activity extends AppCompatActivity  {
                                            @Override
                                            public void onClick(View v) {
 
-                                               Intent territorio9 = new Intent(Main2Activity.this, Terr9.class );
+                                               Intent territorio9 = new Intent(Main2Activity.this, Terr9.class);
                                                startActivity(territorio9);
                                            }
                                        }
@@ -330,83 +323,83 @@ public class Main2Activity extends AppCompatActivity  {
 
         territorio10.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio10 = new Intent(Main2Activity.this, Terr10.class );
-                                               startActivity(territorio10);
-                                           }
-                                       }
+                                                Intent territorio10 = new Intent(Main2Activity.this, Terr10.class);
+                                                startActivity(territorio10);
+                                            }
+                                        }
         );
 
 
         territorio11.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio11 = new Intent(Main2Activity.this, Terr11.class );
-                                               startActivity(territorio11);
-                                           }
-                                       }
+                                                Intent territorio11 = new Intent(Main2Activity.this, Terr11.class);
+                                                startActivity(territorio11);
+                                            }
+                                        }
         );
 
         territorio12.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio12 = new Intent(Main2Activity.this, Terr12.class );
-                                               startActivity(territorio12);
-                                           }
-                                       }
+                                                Intent territorio12 = new Intent(Main2Activity.this, Terr12.class);
+                                                startActivity(territorio12);
+                                            }
+                                        }
         );
 
 
         territorio13.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio13 = new Intent(Main2Activity.this, Terr13.class );
-                                               startActivity(territorio13);
-                                           }
-                                       }
+                                                Intent territorio13 = new Intent(Main2Activity.this, Terr13.class);
+                                                startActivity(territorio13);
+                                            }
+                                        }
         );
 
 
         territorio14.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio14 = new Intent(Main2Activity.this, Terr14.class );
-                                               startActivity(territorio14);
-                                           }
-                                       }
+                                                Intent territorio14 = new Intent(Main2Activity.this, Terr14.class);
+                                                startActivity(territorio14);
+                                            }
+                                        }
         );
 
 
         territorio15.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio15 = new Intent(Main2Activity.this, Terr15.class );
-                                               startActivity(territorio15);
-                                           }
-                                       }
+                                                Intent territorio15 = new Intent(Main2Activity.this, Terr15.class);
+                                                startActivity(territorio15);
+                                            }
+                                        }
         );
 
         mapa.setOnClickListener(new View.OnClickListener() {
 
-                                            @Override
-                                            public void onClick(View v) {
+                                    @Override
+                                    public void onClick(View v) {
 
-                                                Intent mapa = new Intent(Main2Activity.this, Mapa.class );
-                                                startActivity(mapa);
-                                            }
-                                        }
+                                        Intent mapa = new Intent(Main2Activity.this, Mapa.class);
+                                        startActivity(mapa);
+                                    }
+                                }
         );
 
 
@@ -414,108 +407,108 @@ public class Main2Activity extends AppCompatActivity  {
 
         territorio16.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio16 = new Intent(Main2Activity.this, Terr16.class );
-                                               startActivity(territorio16);
-                                           }
-                                       }
+                                                Intent territorio16 = new Intent(Main2Activity.this, Terr16.class);
+                                                startActivity(territorio16);
+                                            }
+                                        }
 
         );
 
 
         territorio17.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio17 = new Intent(Main2Activity.this, Terr17.class );
-                                               startActivity(territorio17);
-                                           }
-                                       }
+                                                Intent territorio17 = new Intent(Main2Activity.this, Terr17.class);
+                                                startActivity(territorio17);
+                                            }
+                                        }
         );
 
 
         territorio18.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio18 = new Intent(Main2Activity.this, Terr18.class );
-                                               startActivity(territorio18);
-                                           }
-                                       }
+                                                Intent territorio18 = new Intent(Main2Activity.this, Terr18.class);
+                                                startActivity(territorio18);
+                                            }
+                                        }
         );
 
 
         territorio19.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio19 = new Intent(Main2Activity.this, Terr19.class );
-                                               startActivity(territorio19);
-                                           }
-                                       }
+                                                Intent territorio19 = new Intent(Main2Activity.this, Terr19.class);
+                                                startActivity(territorio19);
+                                            }
+                                        }
         );
 
         territorio20.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio20 = new Intent(Main2Activity.this, Terr20.class );
-                                               startActivity(territorio20);
-                                           }
-                                       }
+                                                Intent territorio20 = new Intent(Main2Activity.this, Terr20.class);
+                                                startActivity(territorio20);
+                                            }
+                                        }
         );
 
 
         territorio21.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio21 = new Intent(Main2Activity.this, Terr21.class );
-                                               startActivity(territorio21);
-                                           }
-                                       }
+                                                Intent territorio21 = new Intent(Main2Activity.this, Terr21.class);
+                                                startActivity(territorio21);
+                                            }
+                                        }
         );
 
         territorio22.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio22 = new Intent(Main2Activity.this, Terr22.class );
-                                               startActivity(territorio22);
-                                           }
-                                       }
+                                                Intent territorio22 = new Intent(Main2Activity.this, Terr22.class);
+                                                startActivity(territorio22);
+                                            }
+                                        }
         );
 
 
         territorio23.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio23 = new Intent(Main2Activity.this, Terr23.class );
-                                               startActivity(territorio23);
-                                           }
-                                       }
+                                                Intent territorio23 = new Intent(Main2Activity.this, Terr23.class);
+                                                startActivity(territorio23);
+                                            }
+                                        }
         );
 
 
         territorio24.setOnClickListener(new View.OnClickListener() {
 
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                               Intent territorio24 = new Intent(Main2Activity.this, Terr24.class );
-                                               startActivity(territorio24);
-                                           }
-                                       }
+                                                Intent territorio24 = new Intent(Main2Activity.this, Terr24.class);
+                                                startActivity(territorio24);
+                                            }
+                                        }
         );
 
 
@@ -524,7 +517,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio25 = new Intent(Main2Activity.this, Terr25.class );
+                                                Intent territorio25 = new Intent(Main2Activity.this, Terr25.class);
                                                 startActivity(territorio25);
                                             }
                                         }
@@ -536,7 +529,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio26 = new Intent(Main2Activity.this, Terr26.class );
+                                                Intent territorio26 = new Intent(Main2Activity.this, Terr26.class);
                                                 startActivity(territorio26);
                                             }
                                         }
@@ -547,7 +540,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio27 = new Intent(Main2Activity.this, Terr27.class );
+                                                Intent territorio27 = new Intent(Main2Activity.this, Terr27.class);
                                                 startActivity(territorio27);
                                             }
                                         }
@@ -559,7 +552,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio28 = new Intent(Main2Activity.this, Terr28.class );
+                                                Intent territorio28 = new Intent(Main2Activity.this, Terr28.class);
                                                 startActivity(territorio28);
                                             }
                                         }
@@ -571,7 +564,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio29 = new Intent(Main2Activity.this, Terr29.class );
+                                                Intent territorio29 = new Intent(Main2Activity.this, Terr29.class);
                                                 startActivity(territorio29);
                                             }
                                         }
@@ -583,7 +576,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio30 = new Intent(Main2Activity.this, Terr30.class );
+                                                Intent territorio30 = new Intent(Main2Activity.this, Terr30.class);
                                                 startActivity(territorio30);
                                             }
                                         }
@@ -595,7 +588,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio31 = new Intent(Main2Activity.this, Terr31.class );
+                                                Intent territorio31 = new Intent(Main2Activity.this, Terr31.class);
                                                 startActivity(territorio31);
                                             }
                                         }
@@ -607,7 +600,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio32 = new Intent(Main2Activity.this, Terr32.class );
+                                                Intent territorio32 = new Intent(Main2Activity.this, Terr32.class);
                                                 startActivity(territorio32);
                                             }
                                         }
@@ -619,7 +612,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio33 = new Intent(Main2Activity.this, Terr33.class );
+                                                Intent territorio33 = new Intent(Main2Activity.this, Terr33.class);
                                                 startActivity(territorio33);
                                             }
                                         }
@@ -630,7 +623,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio34 = new Intent(Main2Activity.this, Terr34.class );
+                                                Intent territorio34 = new Intent(Main2Activity.this, Terr34.class);
                                                 startActivity(territorio34);
                                             }
                                         }
@@ -641,7 +634,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio35 = new Intent(Main2Activity.this, Terr35.class );
+                                                Intent territorio35 = new Intent(Main2Activity.this, Terr35.class);
                                                 startActivity(territorio35);
                                             }
                                         }
@@ -653,7 +646,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio36 = new Intent(Main2Activity.this, Terr36.class );
+                                                Intent territorio36 = new Intent(Main2Activity.this, Terr36.class);
                                                 startActivity(territorio36);
                                             }
                                         }
@@ -665,7 +658,7 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio37 = new Intent(Main2Activity.this, Terr37.class );
+                                                Intent territorio37 = new Intent(Main2Activity.this, Terr37.class);
                                                 startActivity(territorio37);
                                             }
                                         }
@@ -677,64 +670,30 @@ public class Main2Activity extends AppCompatActivity  {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Intent territorio38 = new Intent(Main2Activity.this, Terr38.class );
+                                                Intent territorio38 = new Intent(Main2Activity.this, Terr38.class);
                                                 startActivity(territorio38);
                                             }
                                         }
         );
 
 
-        territorio39.setOnClickListener(new View.OnClickListener() {
 
-                                            @Override
-                                            public void onClick(View v) {
-
-                                                Intent territorio39 = new Intent(Main2Activity.this, Terr39.class );
-                                                startActivity(territorio39);
-                                            }
-                                        }
-        );
-
-
-        territorio40.setOnClickListener(new View.OnClickListener() {
-
-                                            @Override
-                                            public void onClick(View v) {
-
-                                                Intent territorio40 = new Intent(Main2Activity.this, Terr40.class );
-                                                startActivity(territorio40);
-                                            }
-                                        }
-        );
-
-
-        territorio41.setOnClickListener(new View.OnClickListener() {
-
-                                            @Override
-                                            public void onClick(View v) {
-
-                                                Intent territorio41 = new Intent(Main2Activity.this, intro.class );
-                                                startActivity(territorio41);
-                                            }
-                                        }
-        );
 
 
         predicacion.setOnClickListener(new View.OnClickListener() {
 
-                                            @Override
-                                            public void onClick(View v) {
+                                           @Override
+                                           public void onClick(View v) {
 
-                                                Intent predicacion = new Intent(Main2Activity.this, Predicacion.class );
-                                                startActivity(predicacion);
-                                            }
-                                        }
+                                               Intent predicacion = new Intent(Main2Activity.this, Predicacion.class);
+                                               startActivity(predicacion);
+                                           }
+                                       }
         );
 
 
-
-
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
@@ -776,38 +735,25 @@ public class Main2Activity extends AppCompatActivity  {
     }
 
 
-
     @Override
-    public void onBackPressed(){
-        if (tiempoPrimerClick + INTERVALO > System.currentTimeMillis()){
+    public void onBackPressed() {
+        if (tiempoPrimerClick + INTERVALO > System.currentTimeMillis()) {
             super.onBackPressed();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 finishAffinity();
             }
-        }else {
+        } else {
             Toast.makeText(this, "Vuelva a presionar para salir", Toast.LENGTH_SHORT).show();
         }
         tiempoPrimerClick = System.currentTimeMillis();
     }
 
     @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_terrx4, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void a4 (View v) {
-
-        Intent terr4a = new Intent(Main2Activity.this, Terr4.class );
-        startActivity(terr4a);
-
-    }
-    public void b4 (View v) {
-
-        Intent terr4b = new Intent(Main2Activity.this, Terr4b.class );
-        startActivity(terr4b);
-
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

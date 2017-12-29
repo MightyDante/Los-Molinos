@@ -48,12 +48,12 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terr6);
 
-        TableRow = (ImageView) findViewById(R.id.img);
-        Nombre2 = (EditText) findViewById(R.id.Nombre4);
+        TableRow = findViewById(R.id.img);
+        Nombre2 = findViewById(R.id.Nombre4);
         photoViewAttacher = new PhotoViewAttacher(TableRow);
-        Fecha = (TextView) findViewById(R.id.fecha);
-        horario = (Switch) findViewById(R.id.cambio);
-        Hola = (android.widget.TableRow) findViewById(R.id.cambiocolor);
+        Fecha = findViewById(R.id.fecha);
+        horario = findViewById(R.id.cambio);
+        Hola = findViewById(R.id.cambiocolor);
         horario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,16 +102,16 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
 
     public void onToogle(View view) {
 
-        ToggleButton toogle = (ToggleButton)findViewById(R.id.toggleButton);
+        ToggleButton toogle = findViewById(R.id.toggleButton);
         Boolean estado = toogle.isChecked();
 
-        CheckBox chk1 = (CheckBox)findViewById(R.id.manzana1);
+        CheckBox chk1 = findViewById(R.id.manzana1);
         chk1.setChecked(estado);
-        CheckBox chk2 = (CheckBox)findViewById(R.id.manzana2);
+        CheckBox chk2 = findViewById(R.id.manzana2);
         chk2.setChecked(estado);
-        CheckBox chk3 = (CheckBox)findViewById(R.id.manzana3);
+        CheckBox chk3 = findViewById(R.id.manzana3);
         chk3.setChecked(estado);
-        CheckBox chk4 = (CheckBox)findViewById(R.id.manzana4);
+        CheckBox chk4 = findViewById(R.id.manzana4);
         chk4.setChecked(estado);
 
     }
@@ -121,7 +121,7 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
         String horario = "";
         String manzanas = "";
 
-        Switch horarios = (Switch) findViewById(R.id.cambio);
+        Switch horarios = findViewById(R.id.cambio);
         Boolean hr = horarios.isChecked();
         if(hr == true)
             horario = horario+"Tarde";
@@ -129,34 +129,34 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
             horario = horario+"Mañana";
         }
 
-        CheckBox chk = (CheckBox)findViewById(R.id.manzana1);
+        CheckBox chk = findViewById(R.id.manzana1);
         Boolean estado = chk.isChecked();
         Log.d("Estado",estado.toString());
         if(estado == true)
             manzanas = manzanas+"1,";
-        chk = (CheckBox)findViewById(R.id.manzana2);
+        chk = findViewById(R.id.manzana2);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"2,";
-        chk = (CheckBox)findViewById(R.id.manzana3);
+        chk = findViewById(R.id.manzana3);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"3,";
-        chk = (CheckBox)findViewById(R.id.manzana4);
+        chk = findViewById(R.id.manzana4);
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"4,";
 
-        CheckBox chk2 = (CheckBox)findViewById(R.id.manzana1);
+        CheckBox chk2 = findViewById(R.id.manzana1);
         Boolean estado2 = chk.isChecked();
         if(estado2 == true)
-            chk2 = (CheckBox)findViewById(R.id.manzana2);
+            chk2 = findViewById(R.id.manzana2);
         estado2 = chk2.isChecked();
         if(estado2 == true)
-            chk2 = (CheckBox)findViewById(R.id.manzana3);
+            chk2 = findViewById(R.id.manzana3);
         estado2 = chk2.isChecked();
         if(estado2 == true)
-            chk2 = (CheckBox)findViewById(R.id.manzana4);
+            chk2 = findViewById(R.id.manzana4);
         estado2 = chk2.isChecked();
         if(estado2 == true)
             if(estado2 == true)

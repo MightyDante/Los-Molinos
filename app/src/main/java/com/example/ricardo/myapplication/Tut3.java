@@ -17,7 +17,7 @@ public class Tut3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tut3);
 
-        siguiente3 = (Button) findViewById(R.id.bsiguiente);
+        siguiente3 = findViewById(R.id.bsiguiente);
 
         siguiente3.setOnClickListener(new View.OnClickListener() {
 

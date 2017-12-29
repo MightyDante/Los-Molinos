@@ -511,40 +511,6 @@
                     app:srcCompat="@mipmap/terri38" />
 
                 <ImageButton
-                    android:id="@+id/terr39"
-                    android:layout_width="match_parent"
-                    android:layout_height="126dp"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="#9B401C"
-                    android:contentDescription="TODO"
-                    app:srcCompat="@mipmap/terri39" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageButton
-                    android:id="@+id/terr40"
-                    android:layout_width="match_parent"
-                    android:layout_height="126dp"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="#9B401C"
-                    app:srcCompat="@mipmap/terri40" />
-
-                <ImageButton
-                    android:id="@+id/terr41"
-                    android:layout_width="match_parent"
-                    android:layout_height="126dp"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="#9B401C"
-                    app:srcCompat="@mipmap/terri41" />
-
-                <ImageButton
                     android:id="@+id/nada"
                     android:layout_width="match_parent"
                     android:layout_height="126dp"

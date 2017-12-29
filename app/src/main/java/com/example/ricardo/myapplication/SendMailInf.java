@@ -60,8 +60,7 @@ public class SendMailInf extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        Intent a = new Intent(context, formulariodelinforme.class);
-        a.putExtra("Pass", "listo");
+
 
 
         //Showing progress dialog while sending email
@@ -71,8 +70,9 @@ public class SendMailInf extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
+        Intent a = new Intent(context, formulariodelinforme.class);
+        a.putExtra("Pass", "listo");
 
-        //Dismissing the progress dialog
         progressDialog.dismiss();
         //Showing a success message
     }
@@ -82,6 +82,9 @@ public class SendMailInf extends AsyncTask<Void, Void, Void> {
     private final Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             if (msg.arg1 == 1) {
+
+
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setCancelable(true);
                 builder.setIcon(R.mipmap.icon);

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,7 +21,7 @@
             android:paddingBottom="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Guardar un nombre como Predeterminado"
+            android:text="Guarda tu Nombre"
             android:textSize="23sp" />
 
         <TextView
@@ -31,7 +30,7 @@
             android:layout_height="wrap_content"
             android:background="#FFF1986F"
             android:gravity="center"
-            android:hint="Ingresa un Nombre"
+            android:hint="Aqui estará tu Nombre"
             android:padding="17dp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"

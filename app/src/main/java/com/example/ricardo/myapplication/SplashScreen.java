@@ -1,14 +1,11 @@
 package com.example.ricardo.myapplication;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class SplashScreen extends AppCompatActivity{
-    private static final int I_ACCESS_FINE_LOCATION = 1 ;
-    private static final int I_ACCESS_CORSE_LOCATION = 2 ;
 
     // Assume thisActivity is the current activity
 

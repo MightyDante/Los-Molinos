@@ -18,10 +18,10 @@ public class Comousar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comousar);
-        enviarterritorio = (Button) findViewById(R.id.enviar);
-        vermapa = (Button) findViewById(R.id.mapa);
-        predicacion = (Button) findViewById(R.id.predicacion);
-        internet = (Button) findViewById(R.id.internet);
+        enviarterritorio = findViewById(R.id.enviar);
+        vermapa = findViewById(R.id.mapa);
+        predicacion = findViewById(R.id.predicacion);
+        internet = findViewById(R.id.internet);
 
 
 

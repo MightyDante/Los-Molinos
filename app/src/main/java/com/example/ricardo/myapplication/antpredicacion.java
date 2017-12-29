@@ -24,8 +24,8 @@ public class antpredicacion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_antpredicacion);
-        predicacion = (ImageView) findViewById(R.id.img);
-        direcciones = (Button) findViewById(R.id.direcciones2);
+        predicacion = findViewById(R.id.img);
+        direcciones = findViewById(R.id.direcciones2);
         photoViewAttacher = new PhotoViewAttacher(predicacion);
         Picasso.with(this)
                 .load("http://creadlechile.cl/antpredicacion.jpeg")

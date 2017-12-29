@@ -14,7 +14,7 @@ public class Mapa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
 
-        Mapa = (ImageView) findViewById(R.id.mapa);
+        Mapa = findViewById(R.id.mapa);
         photoViewAttacher = new PhotoViewAttacher(Mapa);
         photoViewAttacher.setMaximumScale(10);
 

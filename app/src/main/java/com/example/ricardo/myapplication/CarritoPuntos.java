@@ -28,13 +28,13 @@ public class CarritoPuntos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carritopuntos);
-        uno =(Button)findViewById(R.id.uno);
-        dos =(Button)findViewById(R.id.dos);
-        tres =(Button)findViewById(R.id.tres);
-        cuatro =(Button)findViewById(R.id.cuatro);
-        cinco =(Button)findViewById(R.id.cinco);
-        seis =(Button)findViewById(R.id.seis);
-        siete =(Button)findViewById(R.id.siete);
+        uno = findViewById(R.id.uno);
+        dos = findViewById(R.id.dos);
+        tres = findViewById(R.id.tres);
+        cuatro = findViewById(R.id.cuatro);
+        cinco = findViewById(R.id.cinco);
+        seis = findViewById(R.id.seis);
+        siete = findViewById(R.id.siete);
 
 
         uno.setOnClickListener(new View.OnClickListener() {
