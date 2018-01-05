@@ -22,7 +22,6 @@ import static android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 public class Informe extends AppCompatActivity {
     LinearLayout titulo;
     RelativeLayout ultenviado, ncv;
-    FloatingActionButton goform;
     TextView nombre, nombre1, texto, texto2, mes, mes3;
     boolean click = false;
     Context context;
@@ -35,7 +34,6 @@ public class Informe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informe);
         titulo = findViewById(R.id.oct1);
-        goform = findViewById(R.id.nuevo);
 
 
         ultenviado = findViewById(R.id.oct2);
@@ -95,22 +93,7 @@ public class Informe extends AppCompatActivity {
 
         }
 
-        goform.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                click = !click;
-                Vibrator vibrator = (Vibrator)
-                        getSystemService(Context.VIBRATOR_SERVICE);
-                if (view == goform) vibrator.vibrate(1);
-                Intent go = new Intent(Informe.this, formulariodelinforme.class);
-
-                startActivity(go);
-                overridePendingTransition(R.anim.left_anim, R.anim.left_anim_out);
-
-
-            }
-        });
     }
 
 }

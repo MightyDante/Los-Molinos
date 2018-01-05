@@ -44,22 +44,7 @@
         android:gravity="bottom|center"
         android:orientation="horizontal">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/nuevo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginBottom="40dp"
-            android:backgroundTint="#cb6232"
-            android:elevation="10dp"
-            android:visibility="visible"
-            app:fab_title="informe"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.95"
-            app:srcCompat="@mipmap/mass_1" />
+
 
 
     </LinearLayout>

@@ -26,7 +26,6 @@ public class Main2Activity extends AppCompatActivity {
     private static final int I_ACCESS_COARSE_LOCATION = 1;
     boolean click = false;
     Context context;
-    FloatingActionButton fab;
     ImageButton mapa;
     ImageButton carrito;
     ImageButton predicacion;
@@ -185,20 +184,7 @@ public class Main2Activity extends AppCompatActivity {
         territorio37 = findViewById(R.id.terr37);
         territorio38 = findViewById(R.id.terr38);
 
-        fab = findViewById(R.id.jol);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                click = !click;
-                Vibrator vibrator = (Vibrator)
-                        getSystemService(Context.VIBRATOR_SERVICE);
-                if (view == fab) vibrator.vibrate(1);
-                Intent dire = new Intent(Main2Activity.this, Informe.class);
-                startActivity(dire);
 
-
-            }
-        });
 
 
         carrito.setOnClickListener(new View.OnClickListener() {
@@ -206,8 +192,11 @@ public class Main2Activity extends AppCompatActivity {
                                        @Override
                                        public void onClick(View v) {
 
-                                           Intent carrito = new Intent(Main2Activity.this, Carritoi.class);
-                                           startActivity(carrito);
+                                           click = !click;
+                                           Vibrator vibrator = (Vibrator)
+                                                   getSystemService(Context.VIBRATOR_SERVICE);
+                                           Intent dire = new Intent(Main2Activity.this, Informe.class);
+                                           startActivity(dire);
                                        }
                                    }
 

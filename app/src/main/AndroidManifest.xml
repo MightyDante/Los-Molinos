@@ -390,6 +390,7 @@
 
         <activity
             android:name=".Configuracion"
+            android:label="Configuración"
             android:parentActivityName=".Main2Activity" />
         <activity
             android:name=".Informe"

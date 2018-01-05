@@ -111,14 +111,7 @@ public class Terr7 extends AppCompatActivity implements View.OnClickListener {
         chk2.setChecked(estado);
         CheckBox chk3 = findViewById(R.id.manzana3);
         chk3.setChecked(estado);
-        CheckBox chk4 = findViewById(R.id.manzana4);
-        chk4.setChecked(estado);
-        CheckBox chk5 = findViewById(R.id.manzana5);
-        chk5.setChecked(estado);
-        CheckBox chk6 = findViewById(R.id.manzana6);
-        chk6.setChecked(estado);
-        CheckBox chk7 = findViewById(R.id.manzana7);
-        chk7.setChecked(estado);
+
 
     }
 
@@ -147,44 +140,18 @@ public class Terr7 extends AppCompatActivity implements View.OnClickListener {
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"3,";
-        chk = findViewById(R.id.manzana4);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"4,";
-        chk = findViewById(R.id.manzana5);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"5,";
-        chk = findViewById(R.id.manzana6);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"6,";
-        chk = findViewById(R.id.manzana7);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"7,";
+
 
         CheckBox chk2 = findViewById(R.id.manzana1);
         Boolean estado2 = chk.isChecked();
         if(estado2 == true)
             chk2 = findViewById(R.id.manzana2);
         estado2 = chk2.isChecked();
-        if(estado2 == true) chk2 = findViewById(R.id.manzana3);
+        if(estado2 == true)
+            chk2 = findViewById(R.id.manzana3);
         estado2 = chk2.isChecked();
         if(estado2 == true)
-            chk2 = findViewById(R.id.manzana4);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana5);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana6);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana7);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            if(estado2 == true)
+
                 manzanas = "Completo ";
 
         String fecha = Fecha.getText().toString().trim();

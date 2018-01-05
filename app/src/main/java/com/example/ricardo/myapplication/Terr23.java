@@ -103,10 +103,7 @@ public class Terr23 extends AppCompatActivity implements View.OnClickListener {
 
         CheckBox chk1 = findViewById(R.id.manzana1);
         chk1.setChecked(estado);
-        CheckBox chk2 = findViewById(R.id.manzana2);
-        chk2.setChecked(estado);
-        CheckBox chk3 = findViewById(R.id.manzana3);
-        chk3.setChecked(estado);
+
 
     }
 
@@ -127,24 +124,12 @@ public class Terr23 extends AppCompatActivity implements View.OnClickListener {
         Log.d("Estado",estado.toString());
         if(estado == true)
             manzanas = manzanas+"1,";
-        chk = findViewById(R.id.manzana2);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"2,";
-        chk = findViewById(R.id.manzana3);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"3,";
+
 
         CheckBox chk2 = findViewById(R.id.manzana1);
         Boolean estado2 = chk.isChecked();
         if(estado2 == true)
-            chk2 = findViewById(R.id.manzana2);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana3);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
+
             if(estado2 == true)
                 manzanas = "Completo ";
 

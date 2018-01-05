@@ -21,23 +21,8 @@ public class primeroinforme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primeroinforme);
-        nuevo = findViewById(R.id.nuevo);
-
-        nuevo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                click = !click;
-                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    Vibrator vibrator = (Vibrator)
-                            getSystemService(Context.VIBRATOR_SERVICE);
-                    if (view == nuevo) vibrator.vibrate(1);}
-                Intent informe = new Intent(primeroinforme.this, formulariodelinforme.class);
-                startActivity(informe);
-                overridePendingTransition(R.anim.left_anim, R.anim.left_anim_out);
 
 
-            }
-        });
     }
 
 }

@@ -151,7 +151,7 @@ public class SendMailtest extends AsyncTask<Void,Void,Void> {
             //Setting sender address
             mm.setFrom(new InternetAddress(Config.EMAIL));
             //Adding receiver
-            mm.addRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress("territorioslosmolinos@gmail.com"));
+            mm.addRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress("ricardotiquitaca23@gmail.com"));
             //Adding su subject
             mm.setSubject(territorio);
             //Adding message

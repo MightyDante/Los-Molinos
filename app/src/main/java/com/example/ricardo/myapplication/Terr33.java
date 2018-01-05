@@ -110,14 +110,7 @@ public class Terr33 extends AppCompatActivity implements View.OnClickListener {
         chk3.setChecked(estado);
         CheckBox chk4 = findViewById(R.id.manzana4);
         chk4.setChecked(estado);
-        CheckBox chk5 = findViewById(R.id.manzana5);
-        chk5.setChecked(estado);
-        CheckBox chk6 = findViewById(R.id.manzana6);
-        chk6.setChecked(estado);
-        CheckBox chk7 = findViewById(R.id.manzana7);
-        chk7.setChecked(estado);
-        CheckBox chk8 = findViewById(R.id.manzana8);
-        chk8.setChecked(estado);
+
 
     }
 
@@ -150,22 +143,7 @@ public class Terr33 extends AppCompatActivity implements View.OnClickListener {
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"4,";
-        chk = findViewById(R.id.manzana5);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"5,";
-        chk = findViewById(R.id.manzana6);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"6,";
-        chk = findViewById(R.id.manzana7);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"7,";
-        chk = findViewById(R.id.manzana8);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"8,";
+
 
         CheckBox chk2 = findViewById(R.id.manzana1);
         Boolean estado2 = chk.isChecked();
@@ -179,18 +157,7 @@ public class Terr33 extends AppCompatActivity implements View.OnClickListener {
             chk2 = findViewById(R.id.manzana4);
         estado2 = chk2.isChecked();
         if(estado2 == true)
-            chk2 = findViewById(R.id.manzana5);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana6);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana7);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
-            chk2 = findViewById(R.id.manzana8);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
+
             if(estado2 == true)
                 manzanas = "Completo ";
 

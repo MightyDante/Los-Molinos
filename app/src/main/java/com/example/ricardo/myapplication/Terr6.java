@@ -111,8 +111,7 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
         chk2.setChecked(estado);
         CheckBox chk3 = findViewById(R.id.manzana3);
         chk3.setChecked(estado);
-        CheckBox chk4 = findViewById(R.id.manzana4);
-        chk4.setChecked(estado);
+
 
     }
 
@@ -142,10 +141,7 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
         estado = chk.isChecked();
         if(estado == true)
             manzanas = manzanas+"3,";
-        chk = findViewById(R.id.manzana4);
-        estado = chk.isChecked();
-        if(estado == true)
-            manzanas = manzanas+"4,";
+
 
         CheckBox chk2 = findViewById(R.id.manzana1);
         Boolean estado2 = chk.isChecked();
@@ -156,9 +152,7 @@ public class Terr6 extends AppCompatActivity implements View.OnClickListener {
             chk2 = findViewById(R.id.manzana3);
         estado2 = chk2.isChecked();
         if(estado2 == true)
-            chk2 = findViewById(R.id.manzana4);
-        estado2 = chk2.isChecked();
-        if(estado2 == true)
+
             if(estado2 == true)
                 manzanas = "Completo ";
 

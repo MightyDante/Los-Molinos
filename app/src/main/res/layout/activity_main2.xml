@@ -42,31 +42,77 @@
                     android:id="@+id/mapa"
                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                     android:layout_width="match_parent"
-                    android:layout_height="126dp"
+                    android:layout_height="96dp"
                     android:layout_weight="1"
                     android:background="#00325B"
                     android:elevation="0dp"
-                    app:srcCompat="@mipmap/icomapafinal" />
+                    app:srcCompat="@mipmap/mpa" />
 
                 <ImageButton
                     android:id="@+id/predicacion"
                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                     android:layout_width="match_parent"
-                    android:layout_height="126dp"
+                    android:layout_height="96dp"
                     android:layout_weight="1"
                     android:background="#cb6232"
                     android:elevation="0dp"
-                    app:srcCompat="@mipmap/predi" />
+                    app:srcCompat="@mipmap/pred" />
 
                 <ImageButton
                     android:id="@+id/carrito"
                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                     android:layout_width="match_parent"
-                    android:layout_height="126dp"
+                    android:layout_height="96dp"
                     android:layout_weight="1"
                     android:background="#333333"
                     android:elevation="0dp"
-                    app:srcCompat="@mipmap/iconcarrito" />
+                    app:srcCompat="@mipmap/inf" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#00325B"
+                    android:paddingBottom="10dp"
+                    android:text="Mapa"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#cb6232"
+                    android:paddingBottom="10dp"
+                    android:text="Predicación"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#333333"
+                    android:paddingBottom="10dp"
+                    android:text="Informe"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
 
             </TableRow>
 
@@ -80,6 +126,7 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:padding="20dp"
                     android:text="Territorios"
@@ -524,21 +571,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/jol"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:backgroundTint="#00325B"
-        android:elevation="10dp"
-        android:visibility="visible"
-        app:fab_title="informe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@mipmap/infprme" />
 
 
 </android.support.constraint.ConstraintLayout>
