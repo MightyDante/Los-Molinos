@@ -1,112 +1,85 @@
 package com.example.ricardo.myapplication;
-import android.app.ProgressDialog;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.AsyncTask;
-import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-//Class is extending AsyncTask because this class is going to perform a networking operation
-public class registro extends AsyncTask<Void,Void,Void> {
+import java.util.Objects;
 
-    //Declaring Variables
-    private Context context;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
-    private Session session;
+public class Registro extends AppCompatActivity implements View.OnClickListener {
+    private static final int INTERVALO = 100; //0,1 segundos para salir
+    private long tiempoPrimerClick;
+    ImageView TableRow;
+    PhotoViewAttacher photoViewAttacher;
+    private EditText Nombre, Telefono;
+    Context context;
 
-    //Information to send email
+    @SuppressLint("HandlerLeak")
+    private final Handler handler = new Handler() {
+        public void handleMessage(android.os.Message msg) {
+            if (msg.arg1 == 1)
+                Toast.makeText(getBaseContext(), "Rellena todos los campos :(", Toast.LENGTH_LONG).show();
 
-    private String numero;
-    private String nombre;
-    private String id;
-
-
-    //Progressdialog to show while sending email
-    private ProgressDialog progressDialog;
-
-    //Class Constructor
-    public registro(Context context, String nombre, String numero, String id){
-        //Initializing variables
-        this.context = context;
-        this.nombre = nombre;
-        this.numero = numero;
-        this.id = id;
-
-    }
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        //Showing progress dialog while sending email
-        progressDialog = ProgressDialog.show(context,"Listo","Configurando App...",false,false);
-    }
-
-    @Override
-    protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
-        //Dismissing the progress dialog
-        progressDialog.dismiss();
-        //Showing a success message
-    }
-
-
-
-
-
-    @Override
-    protected Void doInBackground(Void... params) {
-        //Creating properties
-        Properties props = new Properties();
-
-        //Configuring properties for gmail
-        //If you are not using gmail you may need to change the values
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.socketFactory.port", "465");
-        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.port", "465");
-
-
-        //Creating a new session
-        session = Session.getDefaultInstance(props,
-                new javax.mail.Authenticator() {
-                    //Authenticating the password
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(Config.EMAIL, Config.PASSWORD);
-                    }
-                });
-
-
-
-
-        try {
-            //Creating MimeMessage object
-            MimeMessage mm = new MimeMessage(session);
-
-
-
-            //Setting sender address
-            mm.setFrom(new InternetAddress(Config.EMAIL));
-            //Adding receiver
-            mm.addRecipient(Message.RecipientType.TO, new InternetAddress("territorioslosmolinos@gmail.com"));
-            //Adding su subject
-            mm.setSubject("Registro de " + nombre);
-            //Adding message
-            mm.setText("Nombre: "+ nombre +"\nNúmero: "+numero + "\nId: "+id);
-
-
-
-
-            //Sending email
-            Transport.send(mm);
-
-        } catch (MessagingException e) {
-            e.printStackTrace();
         }
-        return null;
+
+    };
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.registro);
+        Nombre = findViewById(R.id.Nombre);
+        Telefono = findViewById(R.id.Telefono);
+
+    }
+
+    public void Registro(View view) {
+
+        String nombre = Nombre.getText().toString().trim();
+        String telefono = Telefono.getText().toString().trim();
+        String manufacturer = Build.ID;
+        if (!Objects.equals(nombre, "") && !Objects.equals(telefono, "+569")) {
+            EnviadorRegistro sm = new EnviadorRegistro(this, nombre, telefono, manufacturer);
+            sm.execute();
+            Intent intent = new Intent(Registro.this, Inicio.class);
+
+            startActivity(intent);
+
+        } else {
+            android.os.Message msg = handler.obtainMessage();
+            msg.arg1 = 1;
+            handler.sendMessage(msg);
+        }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (tiempoPrimerClick + INTERVALO > System.currentTimeMillis()) {
+            super.onBackPressed();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                finishAffinity();
+            }
+        } else {
+            Toast.makeText(this, "Presiona Finalizar", Toast.LENGTH_SHORT).show();
+        }
+        tiempoPrimerClick = System.currentTimeMillis();
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
+

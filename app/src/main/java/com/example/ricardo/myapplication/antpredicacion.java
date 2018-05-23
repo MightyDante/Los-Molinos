@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.squareup.picasso.MemoryPolicy;
@@ -15,20 +13,18 @@ import com.squareup.picasso.Picasso;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
-public class antpredicacion extends AppCompatActivity {
+public class AntPredicacion extends AppCompatActivity {
     ImageView predicacion;
-    Button direcciones;
     PhotoViewAttacher photoViewAttacher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_antpredicacion);
-        predicacion = findViewById(R.id.img);
-        direcciones = findViewById(R.id.direcciones2);
+        setContentView(R.layout.antpredicacion);
+        predicacion = findViewById(R.id.imageView);
         photoViewAttacher = new PhotoViewAttacher(predicacion);
         Picasso.with(this)
-                .load("http://creadlechile.cl/antpredicacion.jpeg")
+                .load("http://algorit.cl/antpredicacion.png")
                 .error(R.mipmap.predimantencion)
                 .fit()
                 .memoryPolicy(MemoryPolicy.NO_CACHE)
@@ -36,16 +32,7 @@ public class antpredicacion extends AppCompatActivity {
                 .centerInside()
                 .into(predicacion);
 
-        direcciones.setOnClickListener(new View.OnClickListener() {
 
-                                            @Override
-                                            public void onClick(View v) {
-
-                                                Intent dire = new Intent(antpredicacion.this, Direcciones.class );
-                                                startActivity(dire);
-                                            }
-                                        }
-        );
     }
 
     @Override
@@ -62,7 +49,7 @@ public class antpredicacion extends AppCompatActivity {
 
 
             case R.id.siguiente:
-                Intent intent2 = new Intent(antpredicacion.this, Predicacion.class);
+                Intent intent2 = new Intent(AntPredicacion.this, Predicacion.class);
                 startActivity(intent2);
                 overridePendingTransition(R.anim.left_anim, R.anim.left_anim_out);
 

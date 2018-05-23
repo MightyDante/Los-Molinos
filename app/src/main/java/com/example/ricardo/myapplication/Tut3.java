@@ -2,8 +2,8 @@ package com.example.ricardo.myapplication;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -24,7 +24,7 @@ public class Tut3 extends AppCompatActivity {
                                           @Override
                                           public void onClick(View v) {
 
-                                              Intent sig3 = new Intent(Tut3.this, intro.class );
+                                              Intent sig3 = new Intent(Tut3.this, Registro.class );
                                               startActivity(sig3);
                                               overridePendingTransition(R.anim.left_anim, R.anim.left_anim_out);
 

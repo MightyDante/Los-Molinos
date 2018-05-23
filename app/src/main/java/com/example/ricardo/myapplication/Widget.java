@@ -15,13 +15,11 @@ public class Widget extends AppWidgetProvider {
 public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
     final int N = appWidgetIds.length;
 
-    for (int i=0; i<N; i++) {
-        int appWidgetId = appWidgetIds[i];
-
+    for (int appWidgetId : appWidgetIds) {
         Intent intent = new Intent(context, Formulario.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.activity_formularip);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.designwidget);
         views.setOnClickPendingIntent(R.id.imageButton2, pendingIntent);
 
         appWidgetManager.updateAppWidget(appWidgetId, views);

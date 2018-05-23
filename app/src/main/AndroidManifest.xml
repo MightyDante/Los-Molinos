@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ricardo.myapplication">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -18,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Main2Activity"
+            android:name=".Inicio"
             android:label="Los Molinos" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".VentanaSplash"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,334 +24,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Terr1"
-            android:label="Territorio 1"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr2"
-            android:label="Territorio 2"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".terr3"
-            android:label="Territorio 3"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr4"
-            android:label="Territorio 4A"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr5"
-            android:label="Territorio 5"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr6"
-            android:label="Territorio 6"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr7"
-            android:label="Territorio 7"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr8"
-            android:label="Territorio 8"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr9"
-            android:label="Territorio 9"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr10"
-            android:label="Territorio 10"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr11"
-            android:label="Territorio 11"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr12"
-            android:label="Territorio 12"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr13"
-            android:label="Territorio 13"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr14"
-            android:label="Territorio 14"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr15"
-            android:label="Territorio 15"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr16"
-            android:label="Territorio 16"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr17"
-            android:label="Territorio 17"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr18"
-            android:label="Territorio 18"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr19"
-            android:label="Territorio 19"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr20"
-            android:label="Territorio 20"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr21"
-            android:label="Territorio 21"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr22"
-            android:label="Territorio 22"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr23"
-            android:label="Territorio 23"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr24"
-            android:label="Territorio 24"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr25"
-            android:label="Territorio 25"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr26"
-            android:label="Territorio 26"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr27"
-            android:label="Territorio 27"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr28"
-            android:label="Territorio 28"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr29"
-            android:label="Territorio 29"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr30"
-            android:label="Territorio 30"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr31"
-            android:label="Territorio 31"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr32"
-            android:label="Territorio 32"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr33"
-            android:label="Territorio 33"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr34"
-            android:label="Territorio 34"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr35"
-            android:label="Territorio 35"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr36"
-            android:label="Territorio 36"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr37"
-            android:label="Territorio 37"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".Terr38"
-            android:label="Territorio 38"
-            android:parentActivityName=".Main2Activity" />
+            android:name=".TerrBase"
+            android:parentActivityName=".Inicio" />
         <activity
             android:name=".Mapa"
             android:label="Mapa"
-            android:parentActivityName=".Main2Activity" />
+            android:parentActivityName=".Inicio" />
         <activity
-            android:name=".intro"
+            android:name=".Registro"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Predicacion"
             android:label="Predicación" />
-        <activity
-            android:name=".Comousar"
-            android:label="¿Como usar?"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".cuenviarterritorio"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".cumap"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".cupredicacion"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".internet"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <activity android:name=".Formulario" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-
-
-        <!-- Mapas -->
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.ubicaciondecdcarro"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.morgado"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.arancibia"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.acosta"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.becerra"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.camus"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.castro"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.espinoza"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.gajardo"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.garces"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.guajardo"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.hernandez"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.llanquin"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.lorca"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.medina"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.meza"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.mino"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.olivares"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.ortiz"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.perez"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.rodriguez"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.rojas"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.saavedra"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.saez"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.sanchesl"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.sanchesp"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.sandoval"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.sanmartin"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.soto"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.suazo"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.zavala"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto1"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto2"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto3"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto4"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto5"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto6"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.punto7"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".mapas.arancibia"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".Direcciones"
-            android:label="Direcciones"
-            android:parentActivityName=".Predicacion" />
-        <activity
-            android:name=".dsppredicacion"
+            android:name=".ProxPredicacion"
             android:label="Siguiente" />
         <activity
-            android:name=".antpredicacion"
+            android:name=".AntPredicacion"
             android:label="Anterior" />
-        <activity
-            android:name=".Carritoi"
-            android:label="Carrito"
-            android:parentActivityName=".Main2Activity" />
-        <activity
-            android:name=".CarritoSH"
-            android:label="Agendar Hora"
-            android:parentActivityName=".Carritoi" />
+
         <activity
             android:name=".Tut1"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -367,14 +55,7 @@
         <activity
             android:name=".Tut3"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".CarritoPuntos"
-            android:label="Puntos del Carrito"
-            android:parentActivityName=".Carritoi" />
-        <activity
-            android:name=".Carritohoradatos"
-            android:label="Confirmar" />
-        <activity android:name=".Sepuedetomar" />
+
 
         <receiver
             android:name=".Widget"
@@ -391,16 +72,33 @@
         <activity
             android:name=".Configuracion"
             android:label="Configuración"
-            android:parentActivityName=".Main2Activity" />
+            android:parentActivityName=".Inicio" />
         <activity
             android:name=".Informe"
+            android:label="Informe de Servicio"
+            android:parentActivityName=".Inicio"/>
+        <activity
+            android:name=".InformePrimeraVez"
             android:label="Informe de Servicio" />
-        <activity android:name=".primeroinforme"></activity>
-        <activity android:name=".formulariodelinforme" />
+        <activity
+            android:name=".formulariodelinforme"
+            android:label="Formulario" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+        <activity android:name=".Tablero"
+            android:label="Tablero"
+            android:parentActivityName=".Inicio"/>
+
+        <activity android:name=".Vym"
+            android:parentActivityName=".Tablero"/>
+        <activity android:name=".ReunionPublica"
+            android:parentActivityName=".Tablero"/>
+        <activity android:name=".AcomodacionyM"
+            android:parentActivityName=".Tablero"/>
+        <activity android:name=".Aseo"
+            android:parentActivityName=".Tablero"/>
+        <activity android:name=".PredicacionExhibidores"
+            android:parentActivityName=".Tablero"/>
+
     </application>
 
 </manifest>

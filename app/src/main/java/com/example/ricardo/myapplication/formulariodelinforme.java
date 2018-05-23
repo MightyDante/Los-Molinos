@@ -28,7 +28,7 @@ public class formulariodelinforme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.formulariodelinforme);
+        setContentView(R.layout.informeformulario);
         nombre = findViewById(R.id.Nombre);
         horas = findViewById(R.id.Horas);
         publicaciones = findViewById(R.id.Publicaciones);
@@ -76,7 +76,7 @@ public class formulariodelinforme extends AppCompatActivity {
         if (!Objects.equals(ms, "") && !Objects.equals(nm, "") && !Objects.equals(hr, "") && !Objects.equals(vd, "")
                 && !Objects.equals(pb, "") && !Objects.equals(es, "") && !Objects.equals(grup, "")) {
 
-            SendMailInf sm = new SendMailInf(this, ms, nm, hr, vd, pb, es, rev, grup);
+            EnviadorInforme sm = new EnviadorInforme(this, ms, nm, hr, vd, pb, es, rev, grup);
             sm.execute();
 
             String publi = getIntent().getStringExtra("Pass");
@@ -102,7 +102,7 @@ public class formulariodelinforme extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         final CharSequence[] items = {
-                "Grupo 1", "Grupo 2", "Grupo 3", "Grupo 4", "Grupo 5", "Grupo 6"
+                "Grupo 1", "Grupo 2", "Grupo 3", "Grupo 4", "Grupo 5"
         };
 
 
